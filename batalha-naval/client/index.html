@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batalha Naval Multiplayer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Batalha Naval</h1>
+    <div id="game">
+        <div>
+            <h2>Seu Tabuleiro</h2>
+            <div id="player-board" class="board"></div>
+            <button id="confirm-ships" disabled>Confirmar Navios</button> <!-- Botão de confirmar navios -->
+        </div>
+        <div>
+            <h2>Tabuleiro do Oponente</h2>
+            <div id="opponent-board" class="board"></div>
+            <button id="fire-button" disabled>Atirar!</button> <!-- Botão de atirar -->
+        </div>
+    </div>
+
+    <!-- Área para posicionar os navios -->
+    <div id="ships">
+        <h2>Posicione seus Navios</h2>
+        <div class="ship" draggable="true" data-ship-type="submarine">Submarino (1x1)</div>
+        <div class="ship" draggable="true" data-ship-type="destroyer">Destróier (2x1)</div>
+        <div class="ship" draggable="true" data-ship-type="cruiser">Cruzador (3x1)</div>
+        <div class="ship" draggable="true" data-ship-type="battleship">Encouraçado (4x1)</div>
+        <div class="ship" draggable="true" data-ship-type="carrier">Porta-aviões (5x1)</div>
+    </div>
+
+    <button id="start-game">Iniciar Jogo</button> <!-- Botão de iniciar jogo -->
+    <div id="message-area"></div>
+    
+    <div id="message"></div>
+    <script src="game.js"></script>
+</body>
+</html>

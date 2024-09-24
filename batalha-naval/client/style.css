@@ -1,0 +1,67 @@
+#game {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.hidden {
+    visibility: hidden; /* Deixa o navio invisível, mas ele ainda está na DOM */
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(10, 30px);
+    gap: 5px;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #333;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.cell.hit {
+    background-color: red;
+}
+
+.cell.miss {
+    background-color: lightblue;
+}
+
+.cell.ship {
+    background-color: grey;
+}
+
+#ships {
+    margin-top: 20px;
+}
+
+.ship {
+    width: 150px;
+    padding: 10px;
+    background-color: lightgreen;
+    border: 2px solid darkgreen;
+    margin-bottom: 10px;
+    cursor: grab;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
